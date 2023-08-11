@@ -6,9 +6,9 @@ import tailwindcss from 'tailwindcss';
 import basicSsl from '@vitejs/plugin-basic-ssl';
 
 export default defineConfig({
-    // build: {
-    //     minify: false,
-    // },
+    build: {
+        minify: false,
+    },
     // define: {
     //     "global": {},
     // },
