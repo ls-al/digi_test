@@ -1,0 +1,19 @@
+name: Master-to-Staging-Linear-Strategy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Github Linear Strategy - (Re)Create staging branch
+        run: |
+          git checkout -b staging
+          git push origin --force staging
